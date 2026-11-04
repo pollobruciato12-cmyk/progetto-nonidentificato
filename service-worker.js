@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "nonidentificato-v1";
+const CACHE_NAME = "nonidentificato-v2";
 
 const FILES = [
     "./",
@@ -7,7 +7,9 @@ const FILES = [
     "./style.css",
     "./app.js",
     "./manifest.json",
-    "./icon.png"
+    "./icon.png",
+    "./icon-192.png",
+    "./icon-512.png"
 ];
 
 self.addEventListener("install", event => {

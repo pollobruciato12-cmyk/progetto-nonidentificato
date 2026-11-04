@@ -1,0 +1,276 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #ffffff;
+    padding: 22px 16px;
+}
+
+#app {
+    max-width: 500px;
+    margin: auto;
+}
+
+.header {
+    margin: 15px 0 28px;
+}
+
+.sottotitolo {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888888;
+    margin-bottom: 7px;
+}
+
+h1 {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.saldo-card,
+.riepilogo,
+.movimenti {
+    background: #151515;
+    border: 1px solid #262626;
+    border-radius: 20px;
+    padding: 22px;
+}
+
+.saldo-card p,
+.riepilogo-griglia p {
+    color: #999999;
+    font-size: 14px;
+}
+
+.saldo-card h2 {
+    font-size: 40px;
+    margin-top: 9px;
+    letter-spacing: -1px;
+}
+
+.azioni {
+    display: flex;
+    gap: 12px;
+    margin: 16px 0 25px;
+}
+
+button {
+    border: none;
+    border-radius: 13px;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btnEntrata {
+    flex: 1;
+    background: #1266db;
+    color: white;
+}
+
+#btnUscita {
+    flex: 1;
+    background: #d92332;
+    color: white;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.riepilogo,
+.movimenti {
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.riepilogo-griglia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.riepilogo-griglia div {
+    background: #202020;
+    padding: 14px;
+    border-radius: 13px;
+}
+
+.riepilogo-griglia p {
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.riepilogo-griglia strong {
+    font-size: 18px;
+}
+
+#totaleEntrate {
+    color: #3988ff;
+}
+
+#totaleUscite {
+    color: #ff424f;
+}
+
+#listaMovimenti > p {
+    color: #888888;
+    font-size: 13px;
+}
+
+/* POPUP */
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.popup {
+    width: 100%;
+    max-width: 380px;
+    background: #181818;
+    border: 1px solid #333333;
+    padding: 24px;
+    border-radius: 22px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.popup h3 {
+    margin-bottom: 22px;
+}
+
+.popup label {
+    display: block;
+    font-size: 13px;
+    color: #bbbbbb;
+    margin-bottom: 7px;
+}
+
+.popup input {
+    width: 100%;
+    padding: 14px;
+    background: #252525;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 11px;
+    font-size: 16px;
+    outline: none;
+}
+
+.popup input:focus {
+    border-color: #3988ff;
+}
+
+.popup label:not(:first-of-type) {
+    margin-top: 16px;
+}
+
+.popup-azioni {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.popup-azioni button {
+    flex: 1;
+}
+
+#annulla {
+    background: #333333;
+    color: white;
+}
+
+#conferma {
+    background: #1266db;
+    color: white;
+}
+
+@media (max-width: 360px) {
+    .saldo-card h2 {
+        font-size: 34px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+
+.filtri {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.filtro {
+    flex: 1;
+    padding: 10px 6px;
+    font-size: 12px;
+    background: #252525;
+    color: #999999;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+
+.filtro.attivo {
+    background: #1266db;
+    color: white;
+    border-color: #1266db;
+}
+
+.filtro[data-filtro="uscita"].attivo {
+    background: #d92332;
+    border-color: #d92332;
+}
+
+.filtro[data-filtro="entrata"].attivo {
+    background: #1266db;
+    border-color: #1266db;
+}
+
+
+.mese-navigazione {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.mese-navigazione h3 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.mese-navigazione button {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    flex-shrink: 0;
+    background: #252525;
+    color: white;
+    border: 1px solid #383838;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

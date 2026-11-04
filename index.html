@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f5f2">
+    <title>Progetto NonIdentificato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main id="app">
+        <header class="header">
+            <div>
+                <p class="sottotitolo">IL MIO SALVADANAIO</p>
+                <h1>Progetto NonIdentificato</h1>
+            </div>
+        </header>
+
+        <section class="saldo-card">
+            <p>Saldo disponibile</p>
+            <h2 id="saldo">20,00 €</h2>
+        </section>
+
+        <section class="azioni">
+            <button id="btnEntrata">+ Entrata</button>
+            <button id="btnUscita">− Uscita</button>
+        </section>
+      
+<div id="overlay" class="overlay">
+    <section id="modulo" class="popup">
+        <h3 id="titoloModulo">Nuova operazione</h3>
+
+        <label>Descrizione</label>
+        <input id="descrizione" type="text" placeholder="Es. Tabacchino">
+
+        <label>Importo (€)</label>
+        <input id="importo" type="number" step="0.01" min="0.01" placeholder="Es. 10">
+
+        <div class="popup-azioni">
+            <button id="annulla" type="button">Annulla</button>
+            <button id="conferma" type="button">Conferma</button>
+        </div>
+    </section>
+</div>
+
+
+        <section class="riepilogo">
+            <div class="mese-navigazione">
+    <button id="mesePrecedente">‹</button>
+    <h3 id="meseSelezionato">Novembre 2026</h3>
+    <button id="meseSuccessivo">›</button>
+</div>
+
+            <div class="riepilogo-griglia">
+                <div>
+                    <p>Entrate</p>
+                    <strong id="totaleEntrate">0,00 €</strong>
+                </div>
+
+                <div>
+                    <p>Uscite</p>
+                    <strong id="totaleUscite">0,00 €</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="movimenti">
+            <h3>Ultimi movimenti</h3>
+
+<div class="filtri">
+    <button class="filtro attivo" data-filtro="tutti">Tutti</button>
+    <button class="filtro" data-filtro="entrata">Entrate</button>
+    <button class="filtro" data-filtro="uscita">Uscite</button>
+</div>
+            <div id="listaMovimenti">
+                <p>Nessun movimento registrato.</p>
+            </div>
+        </section>
+      <div id="overlayInfo" class="overlay">
+    <section class="popup">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3>Dettagli movimento</h3>
+            <button id="chiudiInfo" type="button"
+                style="background:#333; color:white; padding:8px 12px;">✕</button>
+        </div>
+
+        <p id="infoDescrizione"></p>
+        <p id="infoImporto"></p>
+        <p id="infoTipo"></p>
+        <p id="infoData"></p>
+    </section>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
